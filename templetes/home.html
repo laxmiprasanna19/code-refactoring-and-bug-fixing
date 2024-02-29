@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/" method="POST"> <!-- Specify the method as POST and action as "/" to submit the form to the root route -->
+        <input type="text" name="note" placeholder="Enter a note">
+        <button type="submit">Add Note</button> <!-- Added type="submit" to make sure the button submits the form -->
+    </form>
+
+    <ul>
+    {% for note in notes %}
+        <li>{{ note }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
